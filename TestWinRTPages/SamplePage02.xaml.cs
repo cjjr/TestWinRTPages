@@ -27,6 +27,12 @@ namespace TestWinRTPages
         {
             this.InitializeComponent();
             this.LayoutUpdated += OnLayoutUpdated;
+            this.Unloaded += OnUnloaded;
+        }
+
+        private void OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Sampe Page 02 Unloaded.");
         }
 
         private void OnLayoutUpdated(object sender, object e)
